@@ -1,9 +1,10 @@
 .wrapper{
-    height: 100vh;
+    height: calc(100vh - var(--welcome-nav-height));
     display: flex;
     flex-direction: column;
     //线性背景色
-    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    background-image: linear-gradient(to right, var(--welcome-bg-start) 0%, var(--welcome-bg-end) 100%);
+    margin-bottom: var(--welcome-nav-height);
     > header{
         flex-shrink: 0;
         display: flex;
@@ -24,6 +25,6 @@
 
     > logo{
         width:100px;
-
+        
     }
 }
