@@ -6,7 +6,7 @@ export const Welcome = defineComponent({
     setup: (props, context)=> {
         return () => <div class={s.wrapper}>
             <header>
-                <img src={logo} />
+                <img class={s.logo}src={logo} />
                 <h1>茄子记账</h1>
             </header>
             <main class={s.main}><RouterView></RouterView></main>
