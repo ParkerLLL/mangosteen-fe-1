@@ -1,11 +1,9 @@
-import { defineComponent } from "vue";
-import s from './First.module.scss';
+
+import s from './WelcomeLayout.module.scss';
 import cloud from '../../assets/icons/cloudData.svg'
 import { RouterLink } from "vue-router";
 import { WelcomeLayout } from "./WelcomeLayout";
-export const Fourth = defineComponent({
-    setup: (props, context)=> {
-        return () => (
+export const Fourth = () => (
             <WelcomeLayout>
                 {{
                     icon: ()=> <img class={s.icon} src={cloud} />,
@@ -19,5 +17,4 @@ export const Fourth = defineComponent({
                 }}
             </WelcomeLayout>
         )
-    }
-})
+    Fourth.displayName='Fourth'

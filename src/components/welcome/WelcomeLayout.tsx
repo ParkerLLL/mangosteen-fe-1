@@ -1,10 +1,9 @@
-import { defineComponent } from "vue";
-import s from './First.module.scss';
+import { FunctionalComponent } from "vue";
+import s from './WelcomeLayout.module.scss';
 
-export const WelcomeLayout = defineComponent({
-    setup: (props, context)=> {
+export const WelcomeLayout: FunctionalComponent = (props, context)=> {
         const {slots} = context
-        return () => (
+        return (
             <div class={s.wrapper}>
                 <div class={s.card}>
                     {slots.icon?.()}
@@ -17,4 +16,4 @@ export const WelcomeLayout = defineComponent({
             </div>
         )
     }
-})
+WelcomeLayout.displayName= 'WelcomeLayout'
